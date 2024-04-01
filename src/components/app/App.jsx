@@ -28,10 +28,6 @@ function App() {
     });
   };
 
-  // const handleDeleteContact = (delArray) => {
-  //   setContactArray(delArray);
-  // };
-
   const handleDeleteContact = (contactId) => {
     setContactArray((prevContacts) =>
       prevContacts.filter((contact) => contact.id !== contactId)

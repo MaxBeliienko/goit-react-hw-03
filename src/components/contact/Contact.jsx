@@ -4,12 +4,6 @@ import css from "./Contact.module.css";
 
 const Contact = ({ contact, contactDelete }) => {
   const { name, number, id } = contact;
-  // const deleteContact = () => {
-  //   const deleteFilterArray = contactArray.filter(
-  //     (contact) => contact.id !== contId
-  //   );
-  //   contactDelete(deleteFilterArray);
-  // };
 
   const deleteContact = () => {
     contactDelete(id);
