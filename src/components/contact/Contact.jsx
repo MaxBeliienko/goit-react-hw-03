@@ -1,6 +1,6 @@
 import { FaUser } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
-import css from "./ContactCard.module.css";
+import css from "./Contact.module.css";
 
 const ContactCard = ({ contact, contId, contactArray, contactDelete }) => {
   const { name, number } = contact;
