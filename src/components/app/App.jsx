@@ -28,8 +28,14 @@ function App() {
     });
   };
 
-  const handleDeleteContact = (delArray) => {
-    setContactArray(delArray);
+  // const handleDeleteContact = (delArray) => {
+  //   setContactArray(delArray);
+  // };
+
+  const handleDeleteContact = (contactId) => {
+    setContactArray((prevContacts) =>
+      prevContacts.filter((contact) => contact.id !== contactId)
+    );
   };
 
   const filteredContacts =
@@ -44,7 +50,7 @@ function App() {
       <SearchBox inputValue={inputValue} onChange={handleChangeSearch} />
       <ContactList
         contactArray={filteredContacts}
-        deleteContact={handleDeleteContact}
+        onDeleteContact={handleDeleteContact}
       />
     </div>
   );

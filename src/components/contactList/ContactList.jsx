@@ -1,7 +1,7 @@
 import Contact from "../contact/Contact";
 import css from "./ContactList.module.css";
 
-const ContactList = ({ contactArray, deleteContact }) => {
+const ContactList = ({ contactArray, onDeleteContact }) => {
   return (
     <ul className={css.contList}>
       {contactArray.map((contact) => {
@@ -12,7 +12,7 @@ const ContactList = ({ contactArray, deleteContact }) => {
               contact={contact}
               contId={id}
               contactArray={contactArray}
-              contactDelete={deleteContact}
+              contactDelete={onDeleteContact}
             />
           </li>
         );

@@ -2,13 +2,17 @@ import { FaUser } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import css from "./Contact.module.css";
 
-const ContactCard = ({ contact, contId, contactArray, contactDelete }) => {
-  const { name, number } = contact;
+const Contact = ({ contact, contactDelete }) => {
+  const { name, number, id } = contact;
+  // const deleteContact = () => {
+  //   const deleteFilterArray = contactArray.filter(
+  //     (contact) => contact.id !== contId
+  //   );
+  //   contactDelete(deleteFilterArray);
+  // };
+
   const deleteContact = () => {
-    const deleteFilterArray = contactArray.filter(
-      (contact) => contact.id !== contId
-    );
-    contactDelete(deleteFilterArray);
+    contactDelete(id);
   };
   return (
     <>
@@ -29,4 +33,4 @@ const ContactCard = ({ contact, contId, contactArray, contactDelete }) => {
   );
 };
 
-export default ContactCard;
+export default Contact;
